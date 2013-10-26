@@ -5,6 +5,7 @@
   position: relative;
   font-family: verdana;
   font-size: 12px;
+  font-weight: normal;
   
   .indicator.inactive,
   &.inactive > .indicator {
@@ -34,6 +35,7 @@
     margin-right: 5px;
     cursor: pointer;
     border: 1px solid #777;
+    pointer-events: all;
   }
 
   .dropdown {
@@ -44,6 +46,8 @@
     width: 95px;
     border: 1px solid #aaa;
     border-radius: 5px;
+    z-index: 100;
+    background-color: white;
 
     .item {
       padding: 5px;

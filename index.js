@@ -16,6 +16,7 @@ app.directive('personStatus', ['ffapi', function (ffapi) {
     template: require('./template'),
     link: function (scope, el, attrs) {
       scope.statuses = statuses.titles
+      scope.open = false
       scope.set = function (status) {
         scope.person.status = status
         scope.open = false
