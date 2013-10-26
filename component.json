@@ -4,7 +4,11 @@
   "description": "Status selector for a person",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "familyfound/ffapi": "*",
+    "jaredly/angularjs": "*",
+    "familyfound/statuses": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",
@@ -13,6 +17,6 @@
     "template.js"
   ],
   "styles": [
-    "person-status.css"
+    "person-status.styl"
   ]
 }

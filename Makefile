@@ -1,6 +1,6 @@
 
-build: components index.js person-status.css template.js
-	@component build --dev
+build: components index.js person-status.styl template.js
+	@component build --dev -u component-stylus-plugin
 
 template.js: template.html
 	@component convert $<

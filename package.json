@@ -1,17 +1,5 @@
 {
-  "name": "person-status",
-  "version": "0.0.1",
-  "description": "Person status component",
-  "main": "index.js",
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": "",
-  "keywords": [
-    "familyfound",
-    "component"
-  ],
-  "author": "Jared Forsyth <jared@jaredforsyth.com>",
-  "license": "MIT",
-  "readmeFilename": "Readme.md"
+  "dependencies": {
+    "component-stylus-plugin": "git+https://github.com/jaredly/component-stylus-plugin#0.2.5"
+  }
 }

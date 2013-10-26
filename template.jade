@@ -1,0 +1,6 @@
+span.person-status(class='{{ person.status }}')
+  span.indicator
+  div.dropdown
+    div(ng-repeat='status in statuses', ng-click='set(status.name)', ng-class='{active: status.name === person.status}')
+      span(class='person circle {{ status.name }}')
+      | {{ status.title }}
