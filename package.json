@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "component-stylus-plugin": "git+https://github.com/jaredly/component-stylus-plugin#0.2.5"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "testem": "*"
   }
 }

@@ -2,19 +2,60 @@
 @import('statuses')
 
 .person-status {
-  &.inactive indicator {
+  position: relative;
+  font-family: verdana;
+  font-size: 12px;
+  
+  .indicator.inactive,
+  &.inactive > .indicator {
     background-color: inactive
   }
 
-  &.active indicator {
+  .indicator.active,
+  &.active > .indicator {
     background-color: active;
   }
 
-  &.clean indicator {
+  .indicator.clean,
+  &.clean > .indicator {
     background-color: clean;
   }
 
-  &.complete indicator {
+  .indicator.complete,
+  &.complete > .indicator {
     background-color: complete;
+  }
+
+  .indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #777;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    display: none;
+    width: 95px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    .item {
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eef;
+      }
+    }
+  }
+
+  &.open .dropdown {
+    display: block;
   }
 }

@@ -1,1 +1,1 @@
-module.exports = '';
+module.exports = '<span ng-class="{ open: open }" class="person-status {{ person.status }}"><span ng-click="open = !open" class="indicator"></span>\n  <div class="dropdown">\n    <div ng-repeat="status in statuses" ng-click="set(status.name)" ng-class="{active: status.name === person.status}" class="item"><span class="indicator {{ status.name }}"></span>{{ status.title }}</div>\n  </div></span>';

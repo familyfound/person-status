@@ -9,7 +9,10 @@
     "jaredly/angularjs": "*",
     "familyfound/statuses": "*"
   },
-  "development": {},
+  "development": {
+    "chaijs/chai": "*",
+    "familyfound/ng-bootstrap": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [

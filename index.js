@@ -1,9 +1,10 @@
 
 var routes = {}
-  , angular = require('angular')
+  , angular = require('angularjs')
   , ffapi = require('ffapi')
+  , statuses = require('statuses')
 
-var app = angular.module('person-status', ['ffapi'])
+var app = module.exports = angular.module('person-status', ['ffapi'])
 
 app.directive('personStatus', ['ffapi', function (ffapi) {
   return {
@@ -12,12 +13,13 @@ app.directive('personStatus', ['ffapi', function (ffapi) {
     scope: {
       person: '=personStatus'
     },
-    templateUrl: 'person-status.html',
+    template: require('./template'),
     link: function (scope, el, attrs) {
       scope.statuses = statuses.titles
       scope.set = function (status) {
-        person.status = status
-        ffapi.get('person/status', {status: value, id: $scope.personId});
+        scope.person.status = status
+        scope.open = false
+        ffapi.get('person/status', {status: status, id: scope.person.id});
       }
     }
   }
